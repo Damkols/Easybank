@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.scss"
+import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
+      <Home />
     </div>
   )
 }
