@@ -1,0 +1,47 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+html{
+    font-family: "Public Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+img, span, svg{
+    display: block;
+}
+
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+/* Header */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}

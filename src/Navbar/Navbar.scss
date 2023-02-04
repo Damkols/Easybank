@@ -1,0 +1,84 @@
+@import "../scss/variables";
+
+.navbar{
+    background: $white;
+    @include flex(row, center);
+    justify-content: space-between;
+    padding: $one-rem;
+
+    &__toggle-btn{
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0 $one-rem;
+
+        span{
+            display: block;
+            background: $dark-blue;
+            width: 1.56rem;
+            height: 1px;
+            transition: 0.25s ease;
+        }
+    }
+
+    &__toggle-btn.active{
+
+        .one{
+            transform: rotate(45deg) translateY(3px);
+        }
+        .two{
+            display: none;
+        }
+        .three{
+            transform: rotate(-45deg) translateY(-3px);
+        }
+    }
+
+    &__nav{
+        position: fixed;
+        background: $white;
+        top: $three-rem;
+        left: $one-rem;
+        right: $one-rem;
+        @include flex(column, center);
+        gap: $one-rem;
+        padding: $two-rem 0;
+        border-radius: 0.3rem;
+        z-index: -1;
+        opacity: 0;
+        transition: 0.5s ease;
+        pointer-events: none;
+
+        a{
+            color: $dark-blue;
+            display: block;
+        }
+    }
+
+    &__nav.active{
+        top: calc($three-rem + $one-rem);
+        opacity: 1;
+        box-shadow: 0 0 100px 100px hsla(233, 26%, 24%, 0.2);
+        pointer-events: all;
+    }
+
+    &__btn-primary{
+        background: linear-gradient(90deg, $lime-green, $bright-cyan);
+        color: $white;
+        padding: 0.94rem 1.875rem;
+        border-radius: 3.125rem;
+        font-size: 0.94rem;
+        font-weight: 700;
+        display: block;
+        margin: auto;
+        transition: 0.25s ease;
+
+        :hover{
+            opacity: 0.7;
+        }
+    }
+
+    &__btn-primary{
+        display: none;
+    }
+}
