@@ -63,19 +63,7 @@
     }
 
     &__btn-primary{
-        background: linear-gradient(90deg, $lime-green, $bright-cyan);
-        color: $white;
-        padding: 0.94rem 1.875rem;
-        border-radius: 3.125rem;
-        font-size: 0.94rem;
-        font-weight: 700;
-        display: block;
-        margin: auto;
-        transition: 0.25s ease;
-
-        :hover{
-            opacity: 0.7;
-        }
+        @include btn-gradient;
     }
 
     &__btn-primary{

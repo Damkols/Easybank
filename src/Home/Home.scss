@@ -1,0 +1,50 @@
+@import "../scss/variables";
+
+main{
+    overflow: hidden;
+}
+
+.home{
+    background: $very-light-gray;
+    padding-bottom: 3.75rem;
+
+    &__img-container{
+        background: url() no-repeat top;
+        background-size: cover;
+        padding: 0 0.94rem;
+        margin-bottom: $two-rem;
+
+        .home__img{
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+
+    .homeContainer{
+
+        &__title{
+            font-size: 2.375rem;
+            font-weight: 400;
+            color: $dark-blue;
+            text-align: center;
+            margin-bottom: $two-rem;
+            padding: 0 $one-rem;
+        }
+
+        &__text{
+            margin: auto;
+            color: $grayish-blue;
+            text-align: center;
+            font-size: 0.94rem;
+            line-height: 1.7;
+            margin-bottom: 1.875rem;
+            padding: 0 $one-rem;
+        }
+
+        .btn-primary{
+            @include btn-gradient;
+        }
+    }
+
+}
