@@ -4,14 +4,30 @@
     padding: $three-rem $one-rem;
     background: $very-light-gray;
 
+    @media (min-width: 1024px) {
+        padding: 6.25rem $four-rem;
+    }
+
     &__title{
         margin-bottom: 1.875rem;
+
+        @media (min-width: 768px) {
+            margin-bottom: 3.125rem;
+        }
     }
 
     &__card-group{
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
 
         .articleCard{
             border-radius: 5px;

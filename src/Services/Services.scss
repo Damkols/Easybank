@@ -4,12 +4,21 @@
     padding: $three-rem $one-rem;
     background: $light-grayish-blue;
 
+    @media (min-width: 1024px) {
+        padding: 6.25rem $four-rem;
+    }
+
     &__title{
         color: $dark-blue;
         font-size: 2rem;
         font-weight: 400;
         text-align: center;
         margin-bottom: $one-rem;
+
+        @media (min-width: 1024px) {
+            text-align: left;
+            font-size: $two-rem;
+        }
     }
 
     &__text{
@@ -18,6 +27,20 @@
         line-height: 1.7;
         text-align: center;
         margin-bottom: 3.125rem;
+
+        @media (min-width: 768px) {
+            font-size: 1.125rem;
+            max-width: 400px;
+            margin: auto;
+            margin-bottom: 3.125rem;
+        }
+
+        @media (min-width: 1024px) {
+            text-align: left;
+            max-width: 650px;
+            margin: 0;
+            margin-bottom: $four-rem;
+        }
     }
 
     &__card-group{
@@ -25,12 +48,30 @@
         grid-template-columns: 1fr;
         gap: 30px;
 
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
         .card{
             text-align: center;
+
+            @media (min-width: 1024px) {
+                text-align: left;
+            }
 
             &__icon{
                 margin: auto;
                 margin-bottom: 1.875rem;
+
+                @media (min-width: 1024px) {
+                    margin: 0;
+                    margin-bottom: 1.875rem;
+                }
             }
 
             &__title{
@@ -38,12 +79,20 @@
                 font-size: $one-rem;
                 font-weight: 400;
                 margin-bottom: $one-rem;
+
+                @media (min-width: 1024px) {
+                    font-size: 1.5rem;
+                }
             }
 
             &__text{
                 font-size: 0.94rem;
                 color: $grayish-blue;
                 line-height: 1.7;
+
+                @media (min-width: 1024px) {
+                    font-size: 1rem;
+                }
             }
         }
     }
